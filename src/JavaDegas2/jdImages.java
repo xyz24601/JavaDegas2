@@ -40,6 +40,16 @@ public class jdImages implements jdImgConst
   public static BufferedImage kab00;
   public static BufferedImage kab01;
   
+  // boss images
+  public static BufferedImage bcBlue, bcRed, bcGrey;
+  public static BufferedImage bBarBlue, bBarRed, bBarGrey;
+  public static BufferedImage bS1top, bS1topG;
+  public static BufferedImage bS1bot, bS1botG;
+  public static BufferedImage bS2top, bS2topG;
+  public static BufferedImage bS2bot, bS2botG;
+  public static BufferedImage b1back, b1backG;
+  public static BufferedImage b1tur, b1turG;
+  
   public static void init(Component c)
   {
     String imgDir = System.getProperty("user.dir") + "\\images\\";
@@ -85,8 +95,32 @@ public class jdImages implements jdImgConst
     e7reg = ImgTools.loadBufImage(imgDir + e7imgReg, c);
     e7pow = ImgTools.loadBufImage(imgDir + e7imgPow, c);
     
-    kab00 = ImgTools.loadBufImage(imgDir + jdImgConst.kab00, c);
-    kab01 = ImgTools.loadBufImage(imgDir + jdImgConst.kab01, c);
+    kab00 = ImgTools.loadBufImage(imgDir + kabImg00, c);
+    kab01 = ImgTools.loadBufImage(imgDir + kabImg01, c);
+
+    // load boss images
+    bcBlue = ImgTools.loadBufImage(imgDir + bcBlueImg, c);
+    bcRed = ImgTools.loadBufImage(imgDir + bcRedImg, c);
+    bcGrey = ImgTools.loadBufImage(imgDir + bcGreyImg, c);
+
+    bBarBlue = ImgTools.loadBufImage(imgDir + bBarBlueImg, c);
+    bBarRed = ImgTools.loadBufImage(imgDir + bBarRedImg, c);
+    bBarGrey = ImgTools.loadBufImage(imgDir + bBarGreyImg, c);
+
+    bS1top = ImgTools.loadBufImage(imgDir + bS1topImg, c);
+    bS1bot = ImgTools.loadBufImage(imgDir + bS1botImg, c);
+    bS1topG = ImgTools.loadBufImage(imgDir + bS1topGImg, c);
+    bS1botG = ImgTools.loadBufImage(imgDir + bS1botGImg, c);
+
+    bS2top = ImgTools.loadBufImage(imgDir + bS2topImg, c);
+    bS2bot = ImgTools.loadBufImage(imgDir + bS2botImg, c);
+    bS2topG = ImgTools.loadBufImage(imgDir + bS2topGImg, c);
+    bS2botG = ImgTools.loadBufImage(imgDir + bS2botGImg, c);
+
+    b1back = ImgTools.loadBufImage(imgDir + b1backImg, c);
+    b1backG = ImgTools.loadBufImage(imgDir + b1backGImg, c);
+    b1tur = ImgTools.loadBufImage(imgDir + b1turImg, c);
+    b1turG = ImgTools.loadBufImage(imgDir + b1turGImg, c);
 
   }
 }

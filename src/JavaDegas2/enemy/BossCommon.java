@@ -22,5 +22,5 @@ public abstract class BossCommon extends EnemyCommon
   
   public void setReady()
   { ready = true; }
-  
+ 
 }

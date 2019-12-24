@@ -18,6 +18,7 @@ public class Enemy2 extends EnemyCommon implements StatConst
   private boolean reverse;  // turn back?
   private boolean inScreen;  // flag for reverse to work
   private int imgC;
+  private boolean readyFire;  // flag to fire or not
   
   public Enemy2()
   {
@@ -47,7 +48,14 @@ public class Enemy2 extends EnemyCommon implements StatConst
     reverse = r;
     inScreen = false;
     fired = false;  // so it will fire next round
+    readyFire = false;
     imgC = 0;
+  }
+  
+  // let the group set fire decision
+  public void setReadyFire(boolean bo)
+  {
+    readyFire = bo;
   }
   
   // coord is used to return x, y coordinate
@@ -93,7 +101,8 @@ public class Enemy2 extends EnemyCommon implements StatConst
       if (rad > Math.PI * 2)  // reset
         rad = 0.0;
       
-      if (StatVar.level > 1)  // do not fire at level 1
+      // do not fire at level 1 or set not-to-fire
+      if ((StatVar.level > 1) || readyFire)
       {
         if (!fired && (fireLoc != E2_FIRE_BOTTOM) &&
             (Math.abs(rad - (Math.PI * 3 / 2)) <= yRSpeed))

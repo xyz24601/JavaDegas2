@@ -36,7 +36,7 @@ public class Scores implements StatConst
     g.setFont(f);
     g.setColor(Color.white);
     g.drawString("Score: " + score, SCORE_LEFT, SCORE_BOTTOM);
-    g.drawString("High Score: " + highScore, F_WIDTH / 2, SCORE_BOTTOM);
-    g.drawString("Level: " + StatVar.level, F_WIDTH / 3, SCORE_BOTTOM);
+    g.drawString("High Score: " + highScore, F_WIDTH - 250, SCORE_BOTTOM);
+    g.drawString("Level: " + StatVar.level, (F_WIDTH / 2) - 100, SCORE_BOTTOM);
   }
 }

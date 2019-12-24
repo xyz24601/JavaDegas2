@@ -142,11 +142,11 @@ public class jdFrame implements StatConst
 //    if (!ae.e7g1w3.move(ship, efg, pCap))
 //      ae.e7g1w3.reset();
 
-    if (!ae.e7g2w1.move(ship, efg, pCap))
-      ae.e7g2w1.reset();
+//    if (!ae.e7g2w1.move(ship, efg, pCap))
+//      ae.e7g2w1.reset();
 
-//      if (!ae.b1w.move(ship, efg))
-//        ae.b1w.reset();
+      if (!ae.b1w.move(ship, efg))
+        ae.b1w.reset();
     
       if (!ship.move())
       {
@@ -176,7 +176,7 @@ public class jdFrame implements StatConst
 //    osG.setColor(Color.gray);
 //    osG.drawRect(0, PIP_TOP, F_WIDTH, PIP_HEIGHT);
     
-    starg.paint(osG);  // stars are always back
+    starg.paint(osG);  // stars are always background
     
     if (!StatVar.titleScreen)
     {

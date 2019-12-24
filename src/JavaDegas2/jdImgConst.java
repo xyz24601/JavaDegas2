@@ -26,18 +26,28 @@ public interface jdImgConst
     {"shipBlow10.gif", "shipBlow11.gif",
      "shipBlow12.gif", "shipBlow13.gif"};
 
+//  public static final String pIndImgs[] =
+//    {"pi0SpeedUp.gif", "pi0Bomb.gif",
+//     "pi0Double.gif", "pi0Laser.gif",
+//     "pi0Option.gif", "pi0Shield.gif"};
   public static final String pIndImgs[] =
-    {"pi0SpeedUp.gif", "pi0Bomb.gif",
-     "pi0Double.gif", "pi0Laser.gif",
-     "pi0Option.gif", "pi0Shield.gif"};
+    {"pi1SpeedUp.png", "pi1Bomb.png",
+     "pi1Double.png", "pi1Laser.png",
+     "pi1Option.png", "pi1Shield.png"};
 
+//  public static final String pIndLitImgs[] =
+//    {"pi0SpeedUpLit.gif", "pi0BombLit.gif",
+//     "pi0DoubleLit.gif", "pi0LaserLit.gif",
+//     "pi0OptionLit.gif", "pi0ShieldLit.gif"};
   public static final String pIndLitImgs[] =
-    {"pi0SpeedUpLit.gif", "pi0BombLit.gif",
-     "pi0DoubleLit.gif", "pi0LaserLit.gif",
-     "pi0OptionLit.gif", "pi0ShieldLit.gif"};
+    {"pi1SpeedUpLit.png", "pi1BombLit.png",
+     "pi1DoubleLit.png", "pi1LaserLit.png",
+     "pi1OptionLit.png", "pi1ShieldLit.png"};
 
-  public static final String pIndBlank = "pi0Blank.gif";
-  public static final String pIndBlankLit = "pi0BlankLit.gif";
+//  public static final String pIndBlank = "pi0Blank.gif";
+//  public static final String pIndBlankLit = "pi0BlankLit.gif";
+  public static final String pIndBlank = "pi1Blank.png";
+  public static final String pIndBlankLit = "pi1BlankLit.png";
   
   public static final String bomb = "bomb01.gif";
   
@@ -65,13 +75,19 @@ public interface jdImgConst
     {"e1_00.gif", "e1_01.gif", "e1_02.gif",
      "e1_03.gif", "e1_04.gif", "e1_05.gif"};
   
+//  public static final String e2Pimages[] =
+//    {"e2p_00.gif", "e2p_01.gif", "e2p_02.gif",
+//     "e2p_03.gif", "e2p_04.gif", "e2p_05.gif"};
   public static final String e2Pimages[] =
-    {"e2p_00.gif", "e2p_01.gif", "e2p_02.gif",
-     "e2p_03.gif", "e2p_04.gif", "e2p_05.gif"};
+    {"e2p_00.png", "e2p_01.png", "e2p_02.png",
+     "e2p_03.png", "e2p_04.png", "e2p_05.png"};
   
+//  public static final String e2images[] =
+//    {"e2_00.gif", "e2_01.gif", "e2_02.gif",
+//     "e2_03.gif", "e2_04.gif", "e2_05.gif"};
   public static final String e2images[] =
-    {"e2_00.gif", "e2_01.gif", "e2_02.gif",
-     "e2_03.gif", "e2_04.gif", "e2_05.gif"};
+    {"e2_00.png", "e2_01.png", "e2_02.png",
+     "e2_03.png", "e2_04.png", "e2_05.png"};
       
   public static final String e3images[] =
       {"e3_00.gif", "e3_01.gif",
@@ -106,6 +122,32 @@ public interface jdImgConst
   public static final String e7imgReg = "e7_10.gif";
   public static final String e7imgPow = "e7_10p.gif";
  
-  public static final String kab00 = "kaboom_10.gif";
-  public static final String kab01 = "kaboom_11.gif";
+  public static final String kabImg00 = "kaboom_10.gif";
+  public static final String kabImg01 = "kaboom_11.gif";
+
+  // images for boss  
+  public static final String bcBlueImg = "bossCoreBlue.png";
+  public static final String bcRedImg = "bossCoreRed.png";
+  public static final String bcGreyImg = "bossCoreGrey.png";
+
+  public static final String bBarBlueImg = "bossBarBlue.png";
+  public static final String bBarRedImg = "bossBarRed.png";
+  public static final String bBarGreyImg = "bossBarGrey.png";
+
+  public static final String bS1topImg = "bossSide1top.png";
+  public static final String bS1botImg = "bossSide1bot.png";
+  public static final String bS1topGImg = "bossSide1topGrey.png";
+  public static final String bS1botGImg = "bossSide1botGrey.png";
+
+  public static final String bS2topImg = "bossSide2top.png";
+  public static final String bS2botImg = "bossSide2bot.png";
+  public static final String bS2topGImg = "bossSide2topGrey.png";
+  public static final String bS2botGImg = "bossSide2botGrey.png";
+
+  public static final String b1backImg = "bossBack.png";
+  public static final String b1backGImg = "bossBackGrey.png";
+
+  public static final String b1turImg = "bossTurret.png";
+  public static final String b1turGImg = "bossTurretGrey.png";
+
 }

@@ -40,7 +40,7 @@ public class Enemy2G1 extends FollowGroup implements StatConst
     
     return(true);
   }
-
+  
   // return false when all enemy2s are gone
   public boolean move(Ship ship, EFireG efg, PwrCapG pCap)
   {

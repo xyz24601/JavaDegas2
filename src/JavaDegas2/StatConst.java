@@ -8,7 +8,7 @@ import JavaDegas2.weapon.WeapConst;
 public interface StatConst extends EnemyConst, StarConst, WeapConst
 {
   // frame dimension
-  public static final int F_WIDTH = 810;
+  public static final int F_WIDTH = 800;
   public static final int F_HEIGHT = 600;
   
   public static final int MAX_LEVEL = 7;
@@ -50,7 +50,8 @@ public interface StatConst extends EnemyConst, StarConst, WeapConst
   public static final int PI_OPTION = 5;
   public static final int PI_SHIELD = 6;
   public static final int PIP_HEIGHT = 40;
-  public static final int PIP_WIDTH = (F_WIDTH / PI_MAX);  // 135
+//  public static final int PIP_WIDTH = (F_WIDTH / PI_MAX);  // 135
+  public static final int PIP_WIDTH = 125;
   public static final int PIP_TOP = F_HEIGHT - PIP_HEIGHT;
 
   

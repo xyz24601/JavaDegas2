@@ -30,7 +30,7 @@ public class ListenerKey extends KeyAdapter implements StatConst
         break;
       case KeyEvent.VK_SPACE:
         if (StatVar.titleScreen)
-        {
+        {  // start the game
           StatVar.titleScreen = false;
           StatVar.startGame = true;
         }
@@ -40,6 +40,8 @@ public class ListenerKey extends KeyAdapter implements StatConst
       case KeyEvent.VK_N:
         StatVar.powerUp = true;
         break;
+        
+      // these are for debugging
       case KeyEvent.VK_ADD:
         if (StatVar.level < MAX_LEVEL)
           StatVar.level++;

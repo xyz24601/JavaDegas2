@@ -1,35 +1,53 @@
 package JavaDegas2.enemy;
 
-import java.awt.Component;
-import java.awt.Graphics;
+import java.awt.*;
+import JavaDegas2.*;
 
-public class Boss1Gate extends EnemyCommon implements JavaDegas2.StatConst
+public class Boss1Gate extends BossCommon implements StatConst
 {
-  private double hCount[];
-  private int hDelay[];
-
   public Boss1Gate()
   {
-    super(B1G_WIDTH, B1G_HEIGHT);
-    hCount = new double[1];
-    hDelay = new int[1];
+    super(B1T_WIDTH, B1T_HEIGHT);
   }
   
   public void reset(double xLoc, double yLoc)
   {
-    super.reset();
-    setXY(xLoc, yLoc);
-    hCount[0] = 0.0;
-    hDelay[0] = 100;
+	  super.reset(xLoc,  yLoc);
   }
-  
-  public void setReady()
+
+  public boolean move(Ship ship, EFireG efireg, Coord coord,
+		              double xLoc, double yLoc)
   {
-    ready = true;
+	  if (alive)
+	  {
+	    if (ready)
+	    {
+		    if (checkHit(ship, hCount, B1T_MHIT, hDelay, B1T_MHDELAY, B1T_SCORE, coord))
+		    {
+    		  jdAudio.play(jdAudio.sEnemyHit);
+    		  efireg.firework(this, ship, B1T_BNUM);
+  	  	  alive = false;
+		    }
+	    }
+		  
+	    setXY(xLoc, yLoc);	
+	    hDelay[0]++;
+	  }
+	  return(alive);
   }
   
   
   public void paint(Graphics g, Component c)
-  {}
+  {
+	  if (alive)
+    {
+      if (dying)
+        g.drawImage(jdImages.bBarGrey, (int) getX(), (int) getY(), c); 
+      else if (ready)
+        g.drawImage(jdImages.bBarBlue, (int) getX(), (int) getY(), c); 
+      else
+        g.drawImage(jdImages.bBarRed, (int) getX(), (int) getY(), c); 
+    }
+  }
 
 }

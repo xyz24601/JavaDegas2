@@ -50,13 +50,11 @@ public class Boss1Core extends BossCommon implements StatConst
     if (alive)
     {
       if (dying)
-        g.setColor(Color.yellow);
+        g.drawImage(jdImages.bcGrey, (int) getX(), (int) getY(), c); 
       else if (ready)
-        g.setColor(Color.blue);
+        g.drawImage(jdImages.bcBlue, (int) getX(), (int) getY(), c); 
       else
-        g.setColor(Color.red);
-      
-      g.fillOval((int) getX(), (int) getY(), getW(), getH());
+        g.drawImage(jdImages.bcRed, (int) getX(), (int) getY(), c); 
     }
   }
 }

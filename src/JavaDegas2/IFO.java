@@ -39,6 +39,11 @@ public class IFO extends Coord
     alive = a;
   }
   
+  public void setDying(boolean a)
+  {
+    dying = a;
+  }
+  
   public boolean isAlive() { return(alive); }
   
   public boolean isDying() { return(dying); }

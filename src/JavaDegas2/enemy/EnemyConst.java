@@ -5,7 +5,7 @@ public interface EnemyConst
   // constant for enemy fire
   public static final int EF_WIDTH = 5;
   public static final int EF_HEIGHT = 5;
-  public static final int EF_MAX_NUM = 120;
+  public static final int EF_MAX_NUM = 150;
   public static final double EF_SPEED = 2.5;
   
 //- - - - - - - - - - - - - - - - - - - - - - -  
@@ -165,18 +165,42 @@ public interface EnemyConst
 //- - - - - - - - - - - - - - - - - - - - - - -  
 
   // constant for boss 1 core
-  public static final int B1C_WIDTH = 30;
-  public static final int B1C_HEIGHT = 30;
+  public static final int B1C_WIDTH = 40;
+  public static final int B1C_HEIGHT = 40;
   public static final int B1C_SCORE = 500;
-  public static final double B1C_MHIT = 5.0;
+  public static final double B1C_MHIT = 15.0;
   public static final int B1C_MHDELAY = 10;
   public static final int B1_HMOVE = 20; 
-  public static final int B1_DYING = 25;
+  public static final int B1_DYING = 50;
   
   // constant for boss 1 gate
-  public static final int B1G_WIDTH = 10;
-  public static final int B1G_HEIGHT = 30;
+  public static final int B1T_NUM = 7;
+  public static final int B1T_WIDTH = 10;
+  public static final int B1T_HEIGHT = 40;
+  public static final int B1T_SCORE = 100;
+  public static final int B1T_SPACE = 15;
+  public static final double B1T_MHIT = 10.0;
+  public static final int B1T_MHDELAY = 10;
+  public static final int B1T_BNUM = 30;
   
-  public static final double B1W_SPEED = 4.0;
+  // constant for boss 1 side 1
+  public static final int B1S1_WIDTH = 175;
+  public static final int B1S1_HEIGHT = 30;
+  
+  // constant for boss 1 side 2
+  public static final int B1S2_WIDTH = 275;
+  public static final int B1S2_HEIGHT = 20;
+  
+  // constant for boss 1 back
+  public static final int B1B_WIDTH = 25;
+  public static final int B1B_HEIGHT = 260;
+  
+  // constant for boss 1 turret
+  public static final int B1R1_WIDTH = 5;
+  public static final int B1R1_HEIGHT = 5;
+  public static final int B1R1_FDELAY = 40;
+  public static final int B1R1_BNUM = 25;
+  
+  public static final double B1W_SPEED = 2.0;
 
 }
