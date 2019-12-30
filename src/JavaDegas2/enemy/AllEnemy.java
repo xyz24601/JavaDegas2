@@ -41,6 +41,25 @@ public class AllEnemy
     
     b1w = new Boss1W();
   }
+  
+  public void reset()
+  {
+    e1g1w1.reset();
+    e1g1w2.reset();
+    e2g1w1.reset();
+    e2g1w2.reset();
+    e2g1w3.reset();
+    e2g2w1.reset();
+    e3g1w1.reset();
+    e4g1w1.reset();
+    e5g1w1.reset();
+    e6g1w1.reset();
+    e7g1w1.reset();
+    e7g1w2.reset();
+    e7g1w3.reset();
+    e7g2w1.reset();
+    b1w.reset();
+  }
 
   public void killThem()
   {

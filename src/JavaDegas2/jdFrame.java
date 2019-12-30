@@ -16,10 +16,12 @@ public class jdFrame implements StatConst
   private StarG starg;  // stars
   private EFireG efg;  // enemy fires
   private AllEnemy ae;  // all enemy
+  private Title ttl;  // title screen
+  private GameOver ovr;  // game over screen
+  private Stage01 stg01;  // stage 01
   
   private Ship ship;
   private PwrCapG pCap;  // power capsules
-//  private Scores scores;
   
   public jdFrame()
   {
@@ -39,16 +41,17 @@ public class jdFrame implements StatConst
     starg = new StarG();
     
     efg = new EFireG();
-//    StatVar.efg = new EFireG();
     ae = new AllEnemy();
+    stg01 = new Stage01(ae);
     
     jdImages.init(f);
     jdAudio.init();
     
     pCap = new PwrCapG();
     ship = new Ship(pCap);
-//    scores = new Scores();
     StatVar.scores = new Scores();
+    ttl = new Title();
+    ovr = new GameOver();
     
     starg.goSouth();
 
@@ -58,32 +61,17 @@ public class jdFrame implements StatConst
   
   public void reset()
   {
-//    starg.goSouth();
     efg.reset();
     
     ae.killThem();
     pCap.deleteAll();
-      
-    ae.e1g1w1.reset();
-    ae.e1g1w2.reset();
-    ae.e2g1w1.reset();
-    ae.e2g1w2.reset();
-    ae.e2g1w3.reset();
-    ae.e2g2w1.reset();
-    ae.e3g1w1.reset();
-    ae.e4g1w1.reset();
-    ae.e5g1w1.reset();
-    ae.e6g1w1.reset();
-    ae.e7g1w1.reset();
-    ae.e7g1w2.reset();
-    ae.e7g1w3.reset();
-    ae.e7g2w1.reset();
-    ae.b1w.reset();
+
+    stg01.reset();
+//    ae.reset();
     
     ship.restart();
-//    scores.reset();
-    StatVar.scores.reset();
 
+    StatVar.scores.reset();
   }
   
   public void update()
@@ -92,7 +80,11 @@ public class jdFrame implements StatConst
 
     if (StatVar.titleScreen)
     {
-      
+       // add some kind of demo 
+    }
+    else if (StatVar.gameOver)
+    {
+      ovr.move();
     }
     else if (StatVar.startGame)
     {
@@ -103,62 +95,70 @@ public class jdFrame implements StatConst
     {
       starg.goWest();
     
-//      if (!ae.e1g1w1.move(ship, efg, pCap))
-//        ae.e1g1w1.reset();
+      if (!stg01.move(ship, efg, pCap))
+      {
+        StatVar.level++;
+        stg01.reset();
+      }
+      
+// line      
+//      if (!ae.e1g1w1.move(ship, efg, pCap)) ae.e1g1w1.reset();
+// huge line
+//      if (!ae.e1g1w2.move(ship, efg, pCap)) ae.e1g1w2.reset();
 
-//      if (!ae.e1g1w2.move(ship, efg, pCap))
-//        ae.e1g1w2.reset();
-
+// sine wave full screen
 //      if (!ae.e2g1w1.move(ship, efg, pCap))
-//        ae.e2g1w1.reset();
+//        ae.e2g1w1.reset();  
 
-//      if (!ae.e2g1w2.move(ship, efg, pCap))
-//        ae.e2g1w2.reset();
+// crowd sine wave
+//      if (!ae.e2g1w2.move(ship, efg, pCap)) ae.e2g1w2.reset();
 
-//      if (!ae.e2g1w3.move(ship, efg, pCap))
-//        ae.e2g1w3.reset();
+// sine wave back-and-forth
+//      if (!ae.e2g1w3.move(ship, efg, pCap)) ae.e2g1w3.reset();
 
-//    if (!ae.e2g2w1.move(ship, efg, pCap))
-//      ae.e2g2w1.reset();
+// simple sine wave
+//    if (!ae.e2g2w1.move(ship, efg, pCap)) ae.e2g2w1.reset();
 
-//    if (!ae.e3g1w1.move(ship, efg, pCap))
-//      ae.e3g1w1.reset();
+// bouncer
+//    if (!ae.e3g1w1.move(ship, efg, pCap)) ae.e3g1w1.reset();
 
-//      if (!ae.e4g1w1.move(ship, efg, pCap))
-//        ae.e4g1w1.reset();
+// crash
+//      if (!ae.e4g1w1.move(ship, efg, pCap)) ae.e4g1w1.reset();
 
-//    if (!ae.e5g1w1.move(ship, efg, pCap))
-//      ae.e5g1w1.reset();
+// straight march
+//    if (!ae.e5g1w1.move(ship, efg, pCap)) ae.e5g1w1.reset();
 
-//    if (!ae.e6g1w1.move(ship, efg, pCap))
-//      ae.e6g1w1.reset();
+// walker
+//    if (!ae.e6g1w1.move(ship, efg, pCap)) ae.e6g1w1.reset();
 
+// zabu front
 //    if (!ae.e7g1w1.move(ship, efg, pCap))
 //      ae.e7g1w1.reset();
 
+// zabu back
 //    if (!ae.e7g1w2.move(ship, efg, pCap))
 //      ae.e7g1w2.reset();
 
-//    if (!ae.e7g1w3.move(ship, efg, pCap))
-//      ae.e7g1w3.reset();
+// zabu front and back
+//    if (!ae.e7g1w3.move(ship, efg, pCap)) ae.e7g1w3.reset();
 
-//    if (!ae.e7g2w1.move(ship, efg, pCap))
-//      ae.e7g2w1.reset();
+// zabu all over
+//    if (!ae.e7g2w1.move(ship, efg, pCap)) ae.e7g2w1.reset();
 
-      if (!ae.b1w.move(ship, efg))
-        ae.b1w.reset();
+// boss
+//      if (!ae.b1w.move(ship, efg))
+//        ae.b1w.reset();
     
       if (!ship.move())
       {
         starg.goSouth();
-        StatVar.titleScreen = true;
+        StatVar.gameOver = true;
+        StatVar.goDelay = 0;
       }
     
-//      pCap.move(ship, scores);
       pCap.move(ship, StatVar.scores);
       efg.move(ship);
     
-//      scores.setHigh();  // update high score
       StatVar.scores.setHigh();
     }
   }
@@ -167,28 +167,30 @@ public class jdFrame implements StatConst
   {
     osG.setColor(Color.black);
     osG.fillRect(0,  0,  F_WIDTH,  F_HEIGHT);
-
-    // this may need to be removed
-//    osG.setColor(Color.white);
-//    osG.drawRect(0, 0, F_WIDTH, G_HEIGHT);
-    
-    // this may need to be removed
-//    osG.setColor(Color.gray);
-//    osG.drawRect(0, PIP_TOP, F_WIDTH, PIP_HEIGHT);
-    
-    starg.paint(osG);  // stars are always background
-    
-    if (!StatVar.titleScreen)
+  
+    if (StatVar.titleScreen)
     {
+      ttl.paint(osG, f);
+    }
+    else if (StatVar.gameOver)
+    {
+      ovr.paint(osG, f);
+    }
+    
+    // draw stars on top of title, but behind characters
+    starg.paint(osG);
+
+    if (!StatVar.titleScreen && !StatVar.gameOver)
+    {  // game in progress
       efg.paint(osG);
     
-      ae.paint(osG, f);
+      stg01.paint(osG, f);
+//      ae.paint(osG, f);
       
       pCap.paint(osG, f);
       ship.paint(osG, f);
     }
     
-//    scores.paint(osG);
     StatVar.scores.paint(osG);
     
     g.drawImage(osI, 0, 0, f);

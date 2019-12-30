@@ -5,6 +5,10 @@ import java.awt.image.*;
 
 public class jdImages implements jdImgConst
 {
+  public static BufferedImage ttl, ttlUp, ttlDown, ttlLeft, ttlRight,
+                              ttlFire, ttlPower;
+  public static BufferedImage gOver;
+  
   public static BufferedImage shipSide[];
   public static BufferedImage shipTop[];
   public static BufferedImage shipATop[];
@@ -54,6 +58,15 @@ public class jdImages implements jdImgConst
   {
     String imgDir = System.getProperty("user.dir") + "\\images\\";
 
+    ttl = ImgTools.loadBufImage(imgDir + jdImgConst.title, c);
+    ttlUp = ImgTools.loadBufImage(imgDir + jdImgConst.titleUp, c);
+    ttlDown = ImgTools.loadBufImage(imgDir + jdImgConst.titleDown, c);
+    ttlLeft = ImgTools.loadBufImage(imgDir + jdImgConst.titleLeft, c);
+    ttlRight = ImgTools.loadBufImage(imgDir + jdImgConst.titleRight, c);
+    ttlFire = ImgTools.loadBufImage(imgDir + jdImgConst.titleFire, c);
+    ttlPower = ImgTools.loadBufImage(imgDir + jdImgConst.titlePower, c);
+    gOver = ImgTools.loadBufImage(imgDir + jdImgConst.gameOver, c);
+    
     shipSide = ImgTools.loadMultiImg(sSideImgs, imgDir, c);
     shipTop = ImgTools.loadMultiImg(sTopImgs, imgDir, c);
     shipATop = ImgTools.loadMultiImg(sATopImgs, imgDir, c);

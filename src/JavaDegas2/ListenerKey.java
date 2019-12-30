@@ -29,9 +29,11 @@ public class ListenerKey extends KeyAdapter implements StatConst
         StatVar.keyRIGHT = true;
         break;
       case KeyEvent.VK_SPACE:
-        if (StatVar.titleScreen)
+        if (StatVar.titleScreen ||
+            (StatVar.gameOver && StatVar.goDelay > StatConst.GO_DELAY))
         {  // start the game
           StatVar.titleScreen = false;
+          StatVar.gameOver = false;
           StatVar.startGame = true;
         }
         StatVar.keySPACE = true;

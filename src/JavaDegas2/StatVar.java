@@ -1,7 +1,5 @@
 package JavaDegas2;
 
-import JavaDegas2.enemy.*;
-
 // class to hold static variables
 public class StatVar implements StatConst
 {
@@ -26,9 +24,14 @@ public class StatVar implements StatConst
   
   public static boolean titleScreen = true;
   public static boolean startGame = false;
+  public static boolean gameOver = false;
   
   public static int wType = WT_BEAM;
   public static int level = 1;
   
+  // length to display Game Over
+  public static int goDelay = 0;
+  
+  // this needs to be static to keep the high score
   public static Scores scores;
 }

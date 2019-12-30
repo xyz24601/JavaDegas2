@@ -2,6 +2,15 @@ package JavaDegas2;
 
 public interface jdImgConst
 {
+  public static final String title = "title0.png";
+  public static final String titleUp = "title0up0.png";
+  public static final String titleDown = "title0down0.png";
+  public static final String titleLeft = "title0left0.png";
+  public static final String titleRight = "title0right0.png";
+  public static final String titleFire = "title0space0.png";
+  public static final String titlePower = "title0power0.png";
+  public static final String gameOver = "gameOver0.png";
+
   public static final String sSideImgs[] =
     {"shipSide00.gif", "shipSide01.gif",
      "shipSide02.gif", "shipSide03.gif"};
@@ -22,9 +31,12 @@ public interface jdImgConst
     {"shipABot00.gif", "shipABot01.gif",
      "shipABot02.gif", "shipABot03.gif"};
 
+//  public static final String sBlowImgs[] =
+//    {"shipBlow10.gif", "shipBlow11.gif",
+//     "shipBlow12.gif", "shipBlow13.gif"};
   public static final String sBlowImgs[] =
-    {"shipBlow10.gif", "shipBlow11.gif",
-     "shipBlow12.gif", "shipBlow13.gif"};
+    {"blow00.png", "blow01.png",
+     "blow02.png", "blow03.png"};
 
 //  public static final String pIndImgs[] =
 //    {"pi0SpeedUp.gif", "pi0Bomb.gif",
@@ -122,8 +134,10 @@ public interface jdImgConst
   public static final String e7imgReg = "e7_10.gif";
   public static final String e7imgPow = "e7_10p.gif";
  
-  public static final String kabImg00 = "kaboom_10.gif";
-  public static final String kabImg01 = "kaboom_11.gif";
+//  public static final String kabImg00 = "kaboom_10.gif";
+//  public static final String kabImg01 = "kaboom_11.gif";
+  public static final String kabImg00 = "whiteBlow00.png";
+  public static final String kabImg01 = "whiteBlow01.png";
 
   // images for boss  
   public static final String bcBlueImg = "bossCoreBlue.png";

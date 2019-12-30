@@ -26,6 +26,7 @@ public class Boss1W implements StatConst
   public void killThem()
   {
     alive = false;
+    b1g.killThem();
   }
   
   // return true if aliave

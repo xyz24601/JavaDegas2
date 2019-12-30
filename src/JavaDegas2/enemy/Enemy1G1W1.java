@@ -7,7 +7,7 @@ import JavaDegas2.*;
 // following group appears at 3/4 position 
 public class Enemy1G1W1 extends WaveCommon implements StatConst
 {
-  private final int MAX_EG = 4;
+  private final int MAX_EG = 6;
   private double eSpeed;  // enemy speed
   private boolean top;
   private int eDelay;  // delay between enemy

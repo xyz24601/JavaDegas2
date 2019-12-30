@@ -89,7 +89,7 @@ public interface EnemyConst
   // constant for enemy3 G1 wave 1
   public static final double E3G1W1_XSPEED = 5.0;
   public static final double E3G1W1_RSPEED = 0.06;
-  public static final int E3G1W1_EDELAY = 125;
+  public static final int E3G1W1_EDELAY = 100;
   public static final int E3G1W1_NUM_ENEMY = 5;
   public static final int E3G1W1_MAX_BOUNCE = 7;
 

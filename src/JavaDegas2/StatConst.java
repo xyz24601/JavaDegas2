@@ -13,6 +13,8 @@ public interface StatConst extends EnemyConst, StarConst, WeapConst
   
   public static final int MAX_LEVEL = 7;
   
+  public static final int GO_DELAY = 50;
+  
   // game area
   public static final int G_HEIGHT = F_HEIGHT - 40;
   public static final int G_TOP_MERGIN = 60;
@@ -34,7 +36,7 @@ public interface StatConst extends EnemyConst, StarConst, WeapConst
   public static final int S_DYING = 20;
   public static final int S_READY = 70;
   public static final int S_NEXT = 30;
-  public static final int S_SPARE = 3;
+  public static final int S_SPARE = 3;  // number of ships
   
   // constant for player's shield
   public static final int SH_WIDTH = 25;
