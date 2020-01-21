@@ -1,3 +1,24 @@
+/*
+    JavaDegas2 v1.0 --- Space Shooting Game Classic
+    Copyright (C) 2020  Shinji Umeki (shinji@umeki.org)
+    
+    This program is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 2 of the License, or
+    (at your option) any later version.
+    
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+    
+    You should have received a copy of the GNU General Public License
+    along with this program; if not, write to the Free Software
+    Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+    
+    See the file, COPYING, for more details.
+*/
+
 package JavaDegas2;
 
 import java.awt.*;
@@ -6,6 +27,7 @@ import JavaDegas2.enemy.*;
 import JavaDegas2.star.*;
 
 // game panel class
+// this class does most of the heavy lifting
 public class jdFrame implements StatConst
 {
   private Frame f;
@@ -54,9 +76,6 @@ public class jdFrame implements StatConst
     ovr = new GameOver();
     
     starg.goSouth();
-
-//    jdAudio.mBGM00.loop(Clip.LOOP_CONTINUOUSLY);
-    
   }
   
   public void reset()
@@ -72,6 +91,9 @@ public class jdFrame implements StatConst
     ship.restart();
 
     StatVar.scores.reset();
+    StatVar.level = 1;
+    jdAudio.normalBGM();
+    jdAudio.playBGM();  
   }
   
   public void update()
@@ -154,6 +176,9 @@ public class jdFrame implements StatConst
         starg.goSouth();
         StatVar.gameOver = true;
         StatVar.goDelay = 0;
+        
+        // game over - stop the music
+        jdAudio.stopBGM();        
       }
     
       pCap.move(ship, StatVar.scores);

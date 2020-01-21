@@ -1,3 +1,24 @@
+/*
+    JavaDegas2 v1.0 --- Space Shooting Game Classic
+    Copyright (C) 2020  Shinji Umeki (shinji@umeki.org)
+    
+    This program is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 2 of the License, or
+    (at your option) any later version.
+    
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+    
+    You should have received a copy of the GNU General Public License
+    along with this program; if not, write to the Free Software
+    Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+    
+    See the file, COPYING, for more details.
+*/
+
 package JavaDegas2;
 
 public interface jdImgConst
@@ -31,33 +52,20 @@ public interface jdImgConst
     {"shipABot00.gif", "shipABot01.gif",
      "shipABot02.gif", "shipABot03.gif"};
 
-//  public static final String sBlowImgs[] =
-//    {"shipBlow10.gif", "shipBlow11.gif",
-//     "shipBlow12.gif", "shipBlow13.gif"};
   public static final String sBlowImgs[] =
     {"blow00.png", "blow01.png",
      "blow02.png", "blow03.png"};
 
-//  public static final String pIndImgs[] =
-//    {"pi0SpeedUp.gif", "pi0Bomb.gif",
-//     "pi0Double.gif", "pi0Laser.gif",
-//     "pi0Option.gif", "pi0Shield.gif"};
   public static final String pIndImgs[] =
     {"pi1SpeedUp.png", "pi1Bomb.png",
      "pi1Double.png", "pi1Laser.png",
      "pi1Option.png", "pi1Shield.png"};
 
-//  public static final String pIndLitImgs[] =
-//    {"pi0SpeedUpLit.gif", "pi0BombLit.gif",
-//     "pi0DoubleLit.gif", "pi0LaserLit.gif",
-//     "pi0OptionLit.gif", "pi0ShieldLit.gif"};
   public static final String pIndLitImgs[] =
     {"pi1SpeedUpLit.png", "pi1BombLit.png",
      "pi1DoubleLit.png", "pi1LaserLit.png",
      "pi1OptionLit.png", "pi1ShieldLit.png"};
 
-//  public static final String pIndBlank = "pi0Blank.gif";
-//  public static final String pIndBlankLit = "pi0BlankLit.gif";
   public static final String pIndBlank = "pi1Blank.png";
   public static final String pIndBlankLit = "pi1BlankLit.png";
   
@@ -87,16 +95,10 @@ public interface jdImgConst
     {"e1_00.gif", "e1_01.gif", "e1_02.gif",
      "e1_03.gif", "e1_04.gif", "e1_05.gif"};
   
-//  public static final String e2Pimages[] =
-//    {"e2p_00.gif", "e2p_01.gif", "e2p_02.gif",
-//     "e2p_03.gif", "e2p_04.gif", "e2p_05.gif"};
   public static final String e2Pimages[] =
     {"e2p_00.png", "e2p_01.png", "e2p_02.png",
      "e2p_03.png", "e2p_04.png", "e2p_05.png"};
   
-//  public static final String e2images[] =
-//    {"e2_00.gif", "e2_01.gif", "e2_02.gif",
-//     "e2_03.gif", "e2_04.gif", "e2_05.gif"};
   public static final String e2images[] =
     {"e2_00.png", "e2_01.png", "e2_02.png",
      "e2_03.png", "e2_04.png", "e2_05.png"};
@@ -134,8 +136,6 @@ public interface jdImgConst
   public static final String e7imgReg = "e7_10.gif";
   public static final String e7imgPow = "e7_10p.gif";
  
-//  public static final String kabImg00 = "kaboom_10.gif";
-//  public static final String kabImg01 = "kaboom_11.gif";
   public static final String kabImg00 = "whiteBlow00.png";
   public static final String kabImg01 = "whiteBlow01.png";
 
