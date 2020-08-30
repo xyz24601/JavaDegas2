@@ -27,6 +27,8 @@ These are 6 power up items.
 * **Option:** adds option that acts like an extra ship
 * **Shield:** adds shield
 
+## Screen shots
+
 ![play0](./README_img/ss_play0.png)
 ![play1](./README_img/ss_play1.png)
 ![play2](./README_img/ss_play2.png)
