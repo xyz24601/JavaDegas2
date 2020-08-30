@@ -1,3 +1,5 @@
+![title](./README_img/ss_title0.png)
+
 ## How to Play
 
 I included runnable jar file, __*JavaDegas2run.jar*__.  Download the entire package, because it needs images and sounds even if they are included in the jar file.  Then run that jar file.
