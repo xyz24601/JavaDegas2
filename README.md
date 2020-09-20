@@ -8,6 +8,8 @@ Use **arrow** keys (or **h/j/k/l** keys like vi) to move the ship.
 
 **Space** to fire and **m/n** keys to chose the power up item.
 
+Written using Eclipse IDE for Java Developers version 2018-12 (4.10.0) with Java 1.8.
+
 Enjoy.
 
 ## About JavaDegas2 v.1.0
